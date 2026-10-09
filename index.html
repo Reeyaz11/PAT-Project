@@ -1,49 +1,390 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Guitar House</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guitar House | Find Your Sound</title>
+
+    <meta name="description"
+        content="Discover quality acoustic and electric guitars at Guitar House. Find your sound and explore our collection.">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Announcement -->
+
+    <div class="announcement">
+        FREE DELIVERY ON ORDERS OVER $500
+    </div>
+
+
     <!-- Navigation -->
 
-    <nav>
+    <header class="navbar">
 
-        <div class="logo">
-            🎸 Guitar House
-        </div>
+        <a href="#" class="logo">
+            <span class="logo-icon">G</span>
+            GUITAR<span class="gold">HOUSE</span>
+        </a>
 
-        <div class="links">
+        <nav class="nav-links">
             <a href="#">Home</a>
-            <a href="#guitars">Guitars</a>
-            <a href="#about">About</a>
+            <a href="#shop">Shop Guitars</a>
+            <a href="#story">Our Story</a>
             <a href="#contact">Contact</a>
-        </div>
+        </nav>
 
-    </nav>
+        <button class="cart-button" id="open-cart">
+            <span>Bag</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
 
+    </header>
+
+
+    <!-- Hero -->
 
     <section class="hero">
 
         <div class="hero-content">
 
-            <p class="small-title">PREMIUM GUITARS</p>
+            <p class="eyebrow">FIND YOUR SOUND</p>
 
             <h1>
-                Find Your
-                <span>Perfect Sound.</span>
+                Every great song
+                <span>starts somewhere.</span>
             </h1>
 
-            <p class="hero-text">
-                Discover quality guitars made for
-                beginners, musicians and performers.
+            <p class="hero-description">
+                Discover instruments built for the music
+                you were born to play.
             </p>
 
-            <a href="#guitars" class="shop-button">
-                Explore Guitars →
+            <a href="#shop" class="primary-button">
+                Explore the collection <span>→</span>
+            </a>
+
+            <div class="hero-note">
+                <span class="note-line"></span>
+                MADE FOR MUSIC. MADE TO LAST.
+            </div>
+
+        </div>
+
+        <div class="hero-side-text">
+            THE SOUND OF SOMETHING REAL
+        </div>
+
+    </section>
+
+
+    <!-- Benefits -->
+
+    <section class="benefits">
+
+        <div class="benefit">
+            <span>✦</span>
+            <div>
+                <h3>Curated instruments</h3>
+                <p>Chosen for every playing style</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <span>◇</span>
+            <div>
+                <h3>Secure checkout</h3>
+                <p>Checkout demo ready for integration</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <span>↗</span>
+            <div>
+                <h3>Made for musicians</h3>
+                <p>From first chords to the stage</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Shop -->
+
+    <main id="shop" class="shop-section">
+
+        <div class="shop-heading">
+
+            <div>
+                <p class="eyebrow">THE COLLECTION</p>
+                <h2>Find your instrument.</h2>
+                <p class="section-description">
+                    Six carefully selected instruments. One place to begin.
+                </p>
+            </div>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input type="search" id="search-input"
+                    placeholder="Search guitars..." aria-label="Search guitars">
+            </div>
+
+        </div>
+
+
+        <!-- Filters -->
+
+        <div class="filter-bar">
+
+            <div class="filters">
+                <button class="filter-button active" data-category="all">
+                    All guitars
+                </button>
+
+                <button class="filter-button" data-category="acoustic">
+                    Acoustic
+                </button>
+
+                <button class="filter-button" data-category="electric">
+                    Electric
+                </button>
+
+                <button class="filter-button" data-category="premium">
+                    Premium
+                </button>
+            </div>
+
+            <p id="product-count">6 instruments</p>
+
+        </div>
+
+
+        <!-- Product Cards -->
+
+        <div class="product-grid" id="product-grid">
+
+            <article class="product-card"
+                data-name="Classic Acoustic"
+                data-category="acoustic">
+
+                <div class="product-image">
+                    <span class="product-label">BESTSELLER</span>
+                    <img src="image/image1.jpg" alt="Classic Acoustic Guitar">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-type">ACOUSTIC SERIES</p>
+                    <h3>Classic Acoustic</h3>
+                    <p class="product-description">
+                        Warm tones. Timeless character.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div>
+                            <p class="price-label">PRICE</p>
+                            <p class="product-price">$299.00</p>
+                        </div>
+
+                        <button class="add-button" data-id="1">
+                            Add to bag +
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"
+                data-name="Electric Pro"
+                data-category="electric">
+
+                <div class="product-image">
+                    <span class="product-label">STAGE READY</span>
+                    <img src="image/image2.jpg" alt="Electric Pro Guitar">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-type">ELECTRIC SERIES</p>
+                    <h3>Electric Pro</h3>
+                    <p class="product-description">
+                        Powerful sound. Endless possibilities.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div>
+                            <p class="price-label">PRICE</p>
+                            <p class="product-price">$399.00</p>
+                        </div>
+
+                        <button class="add-button" data-id="2">
+                            Add to bag +
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"
+                data-name="Vintage Classic"
+                data-category="premium">
+
+                <div class="product-image">
+                    <span class="product-label">SIGNATURE STYLE</span>
+                    <img src="image/image3.jpg" alt="Vintage Classic Guitar">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-type">PREMIUM SERIES</p>
+                    <h3>Vintage Classic</h3>
+                    <p class="product-description">
+                        Vintage inspiration. Distinctive tone.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div>
+                            <p class="price-label">PRICE</p>
+                            <p class="product-price">$499.00</p>
+                        </div>
+
+                        <button class="add-button" data-id="3">
+                            Add to bag +
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"
+                data-name="Acoustic Master"
+                data-category="acoustic">
+
+                <div class="product-image">
+                    <img src="image/image4.jpg" alt="Acoustic Master Guitar">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-type">ACOUSTIC SERIES</p>
+                    <h3>Acoustic Master</h3>
+                    <p class="product-description">
+                        A full sound for practice and performance.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div>
+                            <p class="price-label">PRICE</p>
+                            <p class="product-price">$349.00</p>
+                        </div>
+
+                        <button class="add-button" data-id="4">
+                            Add to bag +
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"
+                data-name="Modern Electric"
+                data-category="electric">
+
+                <div class="product-image">
+                    <img src="image/image5.jpg" alt="Modern Electric Guitar">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-type">ELECTRIC SERIES</p>
+                    <h3>Modern Electric</h3>
+                    <p class="product-description">
+                        Bold character for your own sound.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div>
+                            <p class="price-label">PRICE</p>
+                            <p class="product-price">$449.00</p>
+                        </div>
+
+                        <button class="add-button" data-id="5">
+                            Add to bag +
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"
+                data-name="Signature Edition"
+                data-category="premium">
+
+                <div class="product-image">
+                    <span class="product-label">THE SIGNATURE</span>
+                    <img src="image/image6.jpg" alt="Signature Edition Guitar">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-type">PREMIUM SERIES</p>
+                    <h3>Signature Edition</h3>
+                    <p class="product-description">
+                        A distinctive instrument for dedicated players.
+                    </p>
+
+                    <div class="product-bottom">
+                        <div>
+                            <p class="price-label">PRICE</p>
+                            <p class="product-price">$599.00</p>
+                        </div>
+
+                        <button class="add-button" data-id="6">
+                            Add to bag +
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+        <p id="no-results" class="no-results" hidden>
+            No guitars match your search.
+        </p>
+
+    </main>
+
+
+    <!-- Brand Story -->
+
+    <section id="story" class="story-section">
+
+        <div class="story-image">
+            <img src="image/image3.jpg" alt="Guitar from our collection">
+        </div>
+
+        <div class="story-content">
+
+            <p class="eyebrow">OUR PHILOSOPHY</p>
+
+            <h2>
+                It's more than
+                <span>six strings.</span>
+            </h2>
+
+            <p>
+                The right instrument becomes part of your story.
+                Whether you're learning your first song or finding
+                your sound on stage, we're here to help you get started.
+            </p>
+
+            <a href="#shop" class="text-link">
+                Discover the collection →
             </a>
 
         </div>
@@ -51,240 +392,579 @@
     </section>
 
 
+    <!-- Newsletter -->
 
-    <section id="guitars" class="guitars">
+    <section class="newsletter">
 
-        <div class="section-heading">
-
-            <p>OUR COLLECTION</p>
-
-            <h2>Choose Your Guitar</h2>
-
-            <span>
-                Find the perfect instrument for your style.
-            </span>
-
+        <div>
+            <p class="eyebrow">STAY IN TUNE</p>
+            <h2>Good music. No noise.</h2>
+            <p>Updates on new arrivals and the world of guitars.</p>
         </div>
 
-
-        <div class="guitar-container">
-
-
-            <!-- Guitar 1 -->
-
-            <div class="guitar-card">
-
-                <div class="image-box">
-                    <img src="images/image1.jpg"
-                         alt="Classic Acoustic Guitar">
-                </div>
-
-                <div class="card-content">
-
-                    <p class="category">
-                        ACOUSTIC
-                    </p>
-
-                    <h3>
-                        Classic Acoustic
-                    </h3>
-
-                    <p class="description">
-                        A warm and balanced sound
-                        for everyday playing.
-                    </p>
-
-                    <div class="price-row">
-
-                        <h4>$299</h4>
-
-                        <button>
-                            Buy Now
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Guitar 2 -->
-
-            <div class="guitar-card">
-
-                <div class="image-box">
-                    <img src="images/image2.jpg"
-                         alt="Electric Guitar">
-                </div>
-
-                <div class="card-content">
-
-                    <p class="category">
-                        ELECTRIC
-                    </p>
-
-                    <h3>
-                        Electric Pro
-                    </h3>
-
-                    <p class="description">
-                        Powerful tone designed
-                        for rock and performance.
-                    </p>
-
-                    <div class="price-row">
-
-                        <h4>$399</h4>
-
-                        <button>
-                            Buy Now
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Guitar 3 -->
-
-            <div class="guitar-card">
-
-                <div class="image-box">
-                    <img src="images/image3.jpg"
-                         alt="Vintage Guitar">
-                </div>
-
-                <div class="card-content">
-
-                    <p class="category">
-                        PREMIUM
-                    </p>
-
-                    <h3>
-                        Vintage Classic
-                    </h3>
-
-                    <p class="description">
-                        Classic design with a
-                        smooth and warm tone.
-                    </p>
-
-                    <div class="price-row">
-
-                        <h4>$499</h4>
-
-                        <button>
-                            Buy Now
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About Section -->
-
-    <section id="about" class="about">
-
-        <div class="about-heading">
-
-            <p>WHY GUITAR HOUSE?</p>
-
-            <h2>Made For Music Lovers</h2>
-
-        </div>
-
-
-        <div class="features">
-
-            <div class="feature">
-
-                <div class="icon">🎸</div>
-
-                <h3>Quality Guitars</h3>
-
-                <p>
-                    Carefully selected instruments
-                    for great sound and performance.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="icon">💰</div>
-
-                <h3>Fair Prices</h3>
-
-                <p>
-                    Great guitars at prices
-                    that suit every musician.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="icon">⭐</div>
-
-                <h3>Trusted Store</h3>
-
-                <p>
-                    We focus on quality products
-                    and happy customers.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact Section -->
-
-    <section id="contact" class="contact">
-
-        <p>GET IN TOUCH</p>
-
-        <h2>Ready To Play?</h2>
-
-        <p>
-            Have a question about our guitars?
-            Contact us today.
-        </p>
-
-        <a href="mailto:guitarhouse@gmail.com">
-            Contact Us
-        </a>
+        <form id="newsletter-form">
+            <input type="email" id="newsletter-email"
+                placeholder="Your email address" required>
+            <button type="submit">Sign me up →</button>
+        </form>
+
+        <p id="newsletter-message" class="newsletter-message"></p>
 
     </section>
 
 
     <!-- Footer -->
 
-    <footer>
+    <footer id="contact">
 
-        <div>
-            🎸 Guitar House
+        <div class="footer-top">
+
+            <div>
+                <a href="#" class="logo">
+                    <span class="logo-icon">G</span>
+                    GUITAR<span class="gold">HOUSE</span>
+                </a>
+
+                <p class="footer-description">
+                    Find your sound. Make it yours.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>EXPLORE</h3>
+                <a href="#shop">Shop guitars</a>
+                <a href="#story">Our story</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>CONTACT</h3>
+                <a href="mailto:guitarhouse@gmail.com">
+                    Email our team
+                </a>
+                <p>Customer support</p>
+            </div>
+
         </div>
 
-        <p>
-            © 2026 Guitar House. All rights reserved.
-        </p>
+        <div class="footer-bottom">
+            <p>© 2026 Guitar House</p>
+            <p>Built for the love of music.</p>
+        </div>
 
     </footer>
+
+
+    <!-- Cart Background -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- Shopping Cart -->
+
+    <aside class="cart-drawer" id="cart-drawer"
+        aria-label="Shopping cart" aria-hidden="true">
+
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">YOUR SELECTION</p>
+                <h2>Your bag <span id="drawer-count">(0)</span></h2>
+            </div>
+
+            <button class="close-button" id="close-cart"
+                aria-label="Close cart">×</button>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="empty-cart" id="empty-cart">
+            <div class="empty-icon">♬</div>
+            <h3>Your bag is waiting.</h3>
+            <p>Find an instrument that speaks to you.</p>
+            <button class="primary-button" id="continue-shopping">
+                Explore guitars →
+            </button>
+        </div>
+
+        <div class="cart-footer" id="cart-footer">
+
+            <div class="shipping-note">
+                Shipping and delivery are confirmed at checkout.
+            </div>
+
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <strong id="cart-subtotal">$0.00</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Estimated shipping</span>
+                <strong id="cart-shipping">Calculated at checkout</strong>
+            </div>
+
+            <button class="checkout-button" id="checkout-button">
+                Continue to checkout →
+            </button>
+
+            <p class="cart-disclaimer">
+                Checkout demonstration. No payment is collected.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Checkout Modal -->
+
+    <section class="checkout-modal" id="checkout-modal"
+        role="dialog" aria-modal="true"
+        aria-labelledby="checkout-title" aria-hidden="true">
+
+        <div class="checkout-header">
+            <div>
+                <p class="eyebrow">ALMOST YOURS</p>
+                <h2 id="checkout-title">Checkout</h2>
+            </div>
+
+            <button class="close-button" id="close-checkout"
+                aria-label="Close checkout">×</button>
+        </div>
+
+        <form id="checkout-form">
+
+            <h3>Contact information</h3>
+
+            <label for="customer-name">Full name</label>
+            <input type="text" id="customer-name" required
+                autocomplete="name" placeholder="Your full name">
+
+            <label for="customer-email">Email address</label>
+            <input type="email" id="customer-email" required
+                autocomplete="email" placeholder="you@example.com">
+
+            <label for="customer-phone">Phone number</label>
+            <input type="tel" id="customer-phone" required
+                autocomplete="tel" placeholder="Your contact number">
+
+            <h3>Delivery address</h3>
+
+            <label for="customer-address">Street address</label>
+            <input type="text" id="customer-address" required
+                autocomplete="street-address" placeholder="House, street, area">
+
+            <label for="customer-city">City</label>
+            <input type="text" id="customer-city" required
+                autocomplete="address-level2" placeholder="Your city">
+
+            <h3>Order summary</h3>
+
+            <div id="checkout-summary" class="checkout-summary"></div>
+
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <strong id="checkout-subtotal">$0.00</strong>
+            </div>
+
+            <p class="checkout-disclaimer">
+                This is a demonstration checkout. Submitting it does not
+                charge you or create a real order.
+            </p>
+
+            <button class="checkout-button" type="submit">
+                Place demo order →
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Notification -->
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+    <!-- JavaScript -->
+
+    <script>
+        // Product information
+
+        const products = [
+            { id: 1, name: "Classic Acoustic", price: 299, image: "image/image1.jpg" },
+            { id: 2, name: "Electric Pro", price: 399, image: "image/image2.jpg" },
+            { id: 3, name: "Vintage Classic", price: 499, image: "image/image3.jpg" },
+            { id: 4, name: "Acoustic Master", price: 349, image: "image/image4.jpg" },
+            { id: 5, name: "Modern Electric", price: 449, image: "image/image5.jpg" },
+            { id: 6, name: "Signature Edition", price: 599, image: "image/image6.jpg" }
+        ];
+
+        let cart = [];
+
+        try {
+            cart = JSON.parse(localStorage.getItem("guitar-house-cart")) || [];
+        } catch (error) {
+            cart = [];
+        }
+
+        function saveCart() {
+            localStorage.setItem("guitar-house-cart", JSON.stringify(cart));
+        }
+
+        function formatPrice(price) {
+            return "$" + price.toFixed(2);
+        }
+
+
+        // Cart elements
+
+        const cartDrawer = document.getElementById("cart-drawer");
+        const overlay = document.getElementById("overlay");
+        const cartItems = document.getElementById("cart-items");
+        const emptyCart = document.getElementById("empty-cart");
+        const cartFooter = document.getElementById("cart-footer");
+        const checkoutModal = document.getElementById("checkout-modal");
+        const toast = document.getElementById("toast");
+
+        function showToast(message) {
+            toast.textContent = message;
+            toast.classList.add("show");
+
+            setTimeout(function () {
+                toast.classList.remove("show");
+            }, 2500);
+        }
+
+
+        // Open and close cart
+
+        function openCart() {
+            cartDrawer.classList.add("open");
+            overlay.classList.add("show");
+            cartDrawer.setAttribute("aria-hidden", "false");
+            document.body.classList.add("no-scroll");
+        }
+
+        function closeCart() {
+            cartDrawer.classList.remove("open");
+            overlay.classList.remove("show");
+            cartDrawer.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("no-scroll");
+        }
+
+        document.getElementById("open-cart").addEventListener("click", openCart);
+        document.getElementById("close-cart").addEventListener("click", closeCart);
+        document.getElementById("continue-shopping").addEventListener("click", closeCart);
+
+        overlay.addEventListener("click", function () {
+            closeCart();
+        });
+
+
+        // Add products
+
+        document.querySelectorAll(".add-button").forEach(function (button) {
+            button.addEventListener("click", function () {
+                const id = Number(button.dataset.id);
+                const existingItem = cart.find(function (item) {
+                    return item.id === id;
+                });
+
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({ id: id, quantity: 1 });
+                }
+
+                saveCart();
+                renderCart();
+                showToast("Added to your bag.");
+            });
+        });
+
+
+        // Update quantities or remove items
+
+        function changeQuantity(id, amount) {
+            const item = cart.find(function (product) {
+                return product.id === id;
+            });
+
+            if (!item) return;
+
+            item.quantity += amount;
+
+            if (item.quantity <= 0) {
+                cart = cart.filter(function (product) {
+                    return product.id !== id;
+                });
+            }
+
+            saveCart();
+            renderCart();
+        }
+
+        function removeItem(id) {
+            cart = cart.filter(function (item) {
+                return item.id !== id;
+            });
+
+            saveCart();
+            renderCart();
+            showToast("Item removed.");
+        }
+
+
+        // Draw the cart
+
+        function renderCart() {
+            cartItems.innerHTML = "";
+
+            cart = cart.filter(function (item) {
+                return products.some(function (product) {
+                    return product.id === item.id;
+                }) && item.quantity > 0;
+            });
+
+            const itemCount = cart.reduce(function (total, item) {
+                return total + item.quantity;
+            }, 0);
+
+            const subtotal = cart.reduce(function (total, item) {
+                const product = products.find(function (p) {
+                    return p.id === item.id;
+                });
+
+                return total + product.price * item.quantity;
+            }, 0);
+
+            document.getElementById("cart-count").textContent = itemCount;
+            document.getElementById("drawer-count").textContent = "(" + itemCount + ")";
+            document.getElementById("cart-subtotal").textContent = formatPrice(subtotal);
+
+            emptyCart.style.display = itemCount === 0 ? "flex" : "none";
+            cartFooter.style.display = itemCount === 0 ? "none" : "block";
+
+            cart.forEach(function (item) {
+                const product = products.find(function (p) {
+                    return p.id === item.id;
+                });
+
+                const row = document.createElement("div");
+                row.className = "cart-item";
+
+                row.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="cart-item-info">
+                        <h3>${product.name}</h3>
+                        <p>${formatPrice(product.price)}</p>
+
+                        <div class="quantity-control">
+                            <button data-action="minus" aria-label="Decrease quantity">−</button>
+                            <span>${item.quantity}</span>
+                            <button data-action="plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item-end">
+                        <strong>${formatPrice(product.price * item.quantity)}</strong>
+                        <button class="remove-button" data-action="remove">
+                            Remove
+                        </button>
+                    </div>
+                `;
+
+                row.querySelector('[data-action="minus"]').addEventListener("click", function () {
+                    changeQuantity(item.id, -1);
+                });
+
+                row.querySelector('[data-action="plus"]').addEventListener("click", function () {
+                    changeQuantity(item.id, 1);
+                });
+
+                row.querySelector('[data-action="remove"]').addEventListener("click", function () {
+                    removeItem(item.id);
+                });
+
+                cartItems.appendChild(row);
+            });
+
+            saveCart();
+        }
+
+
+        // Search and category filters
+
+        let selectedCategory = "all";
+
+        function filterProducts() {
+            const search = document.getElementById("search-input").value
+                .toLowerCase().trim();
+
+            let visibleCount = 0;
+
+            document.querySelectorAll(".product-card").forEach(function (card) {
+                const name = card.dataset.name.toLowerCase();
+                const category = card.dataset.category;
+
+                const matchesSearch = name.includes(search);
+                const matchesCategory =
+                    selectedCategory === "all" || category === selectedCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("product-count").textContent =
+                visibleCount + (visibleCount === 1 ? " instrument" : " instruments");
+
+            document.getElementById("no-results").hidden = visibleCount !== 0;
+        }
+
+        document.getElementById("search-input").addEventListener("input", filterProducts);
+
+        document.querySelectorAll(".filter-button").forEach(function (button) {
+            button.addEventListener("click", function () {
+                document.querySelectorAll(".filter-button").forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                button.classList.add("active");
+                selectedCategory = button.dataset.category;
+                filterProducts();
+            });
+        });
+
+
+        // Checkout
+
+        document.getElementById("checkout-button").addEventListener("click", function () {
+            if (cart.length === 0) return;
+
+            closeCart();
+
+            const subtotal = cart.reduce(function (total, item) {
+                const product = products.find(function (p) {
+                    return p.id === item.id;
+                });
+
+                return total + product.price * item.quantity;
+            }, 0);
+
+            const summary = document.getElementById("checkout-summary");
+            summary.innerHTML = "";
+
+            cart.forEach(function (item) {
+                const product = products.find(function (p) {
+                    return p.id === item.id;
+                });
+
+                const line = document.createElement("p");
+                line.textContent = product.name + " × " + item.quantity +
+                    " — " + formatPrice(product.price * item.quantity);
+
+                summary.appendChild(line);
+            });
+
+            document.getElementById("checkout-subtotal").textContent =
+                formatPrice(subtotal);
+
+            checkoutModal.classList.add("show");
+            checkoutModal.setAttribute("aria-hidden", "false");
+            overlay.classList.add("show");
+            document.body.classList.add("no-scroll");
+        });
+
+        function closeCheckout() {
+            checkoutModal.classList.remove("show");
+            checkoutModal.setAttribute("aria-hidden", "true");
+            overlay.classList.remove("show");
+            document.body.classList.remove("no-scroll");
+        }
+
+        document.getElementById("close-checkout").addEventListener("click", closeCheckout);
+
+        document.getElementById("checkout-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (cart.length === 0) {
+                closeCheckout();
+                return;
+            }
+
+            const orderNumber = "GH-" + Date.now().toString().slice(-8);
+
+            const order = {
+                orderNumber: orderNumber,
+                customer: document.getElementById("customer-name").value,
+                email: document.getElementById("customer-email").value,
+                phone: document.getElementById("customer-phone").value,
+                address: document.getElementById("customer-address").value,
+                city: document.getElementById("customer-city").value,
+                items: cart.map(function (item) {
+                    const product = products.find(function (p) {
+                        return p.id === item.id;
+                    });
+
+                    return {
+                        name: product.name,
+                        price: product.price,
+                        quantity: item.quantity
+                    };
+                })
+            };
+
+            const total = order.items.reduce(function (sum, item) {
+                return sum + item.price * item.quantity;
+            }, 0);
+
+            // Demonstration only. This does not send an order to a server.
+
+            closeCheckout();
+
+            alert(
+                "Demo order created: " + order.orderNumber +
+                "\n\nThank you, " + order.customer + "!" +
+                "\nOrder total: " + formatPrice(total) +
+                "\n\nThis is a demonstration only. No real order was sent and no payment was collected."
+            );
+
+            cart = [];
+            saveCart();
+            renderCart();
+            document.getElementById("checkout-form").reset();
+        });
+
+
+        // Newsletter demo
+
+        document.getElementById("newsletter-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            document.getElementById("newsletter-message").textContent =
+                "Thanks! Newsletter signup needs a connected email service to be saved.";
+
+            this.reset();
+        });
+
+
+        // Close popups using Escape
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeCart();
+                closeCheckout();
+            }
+        });
+
+
+        // Load saved cart
+
+        renderCart();
+    </script>
 
 </body>
 
